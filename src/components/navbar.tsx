@@ -1,78 +1,67 @@
-import React from 'react';
-import { Leaf } from 'lucide-react';
+import { Home, LayoutDashboard, ShoppingCart, LineChart, Brain, Users, LeafyGreen } from 'lucide-react';
+import { FloatingDock } from './ui/floating-dock';
+import { UserButton, UserProfile } from '@clerk/clerk-react';
 
-const Navbar: React.FC = () => {
+const navigationItems = [
+  {
+    title: 'AgriMarket',
+    icon: < LeafyGreen className="w-5 " />,
+    href: '/'
+  },
+  {
+    title: 'Home',
+    icon: <Home className="h-full w-full" />,
+    href: '/'
+  },
+  {
+    title: 'Dashboard',
+    icon: <LayoutDashboard className="h-full w-full" />,
+    href: '/dashboard'
+  },
+  {
+    title: 'Products',
+    icon: <ShoppingCart className="h-full w-full" />,
+    href: '/products'
+  },
+  {
+    title: 'Market Pricing',
+    icon: <LineChart className="h-full w-full" />,
+    href: '/pricing'
+  },
+  {
+    title: 'AI Recognition',
+    icon: <Brain className="h-full w-full " />,
+    href: '/ai'
+  },
+  {
+    title: 'Connect',
+    icon: <Users className="h-full w-full " />,
+    href: '/connect'
+  },
+  {
+    title: 'Profile',
+
+    icon: <UserButton />,
+    href: '/'
+  },
+];
+function Navbar () {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16">
-        <div className="flex items-center">
-          <a href="/" className="flex items-center gap-2 text-white font-bold text-2xl">
-            <Leaf className="w-8 h-8" />
-            <span className="text-shadow">AgriMarket</span>
-          </a>
+    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent bg-gray-50 dark:bg-neutral-900/80 backdrop-blur-sm  flex flex-row justify-around items-center">
+      <div>
+        <h1 className='text-green-900 text-3xl text-bold flex flex-row justify-around items-center'>
+          <LeafyGreen className="w-5 " />
+          AgriMarket
+        </h1>
         </div>
-
-        <nav className="hidden md:flex items-center space-x-8">
-          <a 
-            href="/" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Home
-          </a>
-          <a 
-            href="/dashboard" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Dashboard
-          </a>
-          <a 
-            href="/products" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Products
-          </a>
-          <a 
-            href="/pricing" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Market Pricing
-          </a>
-          <a
-          href="/news" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            News
-          </a>
-          <a
-          href="/orders" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Your Orders
-          </a>
-          <a 
-            href="/ai" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Ai-Recognition
-          </a>
-          <a 
-            href="/connect" 
-            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >  
-            Connect  
-          </a>  
-        </nav>  
-
-        <div>
-          <a
-            href="/user"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-600 to-green-500 px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-xl hover:from-green-500 hover:to-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-          >
-            Profile
-          </a>
-        </div>
+      <div>
+      <FloatingDock
+        items={navigationItems}
+        desktopClassName="  py-6 flex items-center gap-20"
+        mobileClassName="absolute top-4 right-7"
+      />
       </div>
-    </header>
+    </div>
   );
 };
 

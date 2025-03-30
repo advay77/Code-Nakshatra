@@ -2,11 +2,13 @@ import NavbarSection from "./components/navbar"
 import DashboardSection from "./components/dashboard-section"
 import { BrowserRouter,Routes, Route } from "react-router-dom"
 import Dashboard from "./components/dashboard-section"
-import Farmer from "./components/farmer"
+import Farmer from "./components/Farmer"
 import Buyer from "./components/buyer"
 import Products from "./components/Products"
 import AiFarmer from "./components/AiFarmer"
-import News from "./components/News"
+import MarketPricing from "./components/MarketPricing"
+
+
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
   <Route path="/farmer" element={<Farmer/>} />
   <Route path="/buyer" element={<Buyer/>} />
   <Route path="/ai" element={<AiFarmer/>} />
-<Route path="/news" element={<News/>}/>
+  <Route path="/pricing" element={<MarketPricing/>} />
   <Route path="/products" element={<Products/>} />
 
   

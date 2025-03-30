@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar/>
       
       {/* Hero Section with Enhanced Parallax and Nature Theme */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -55,12 +55,12 @@ const Dashboard: React.FC = () => {
             <span className="">Explore Now</span>
           </button>
           </SignInButton>
-        <SignedIn>
-        <UserButton />
+        
+        
         <Link to="/dashboard">
           <button className="btn">Go to Dashboard</button>
         </Link>
-      </SignedIn>
+      
                 
               
            </div>
