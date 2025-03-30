@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 
 
-const NewsItem({ title, description, imageUrl, newsUrl }) => {
+function NewsItem() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

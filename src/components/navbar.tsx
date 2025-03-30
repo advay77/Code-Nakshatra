@@ -58,10 +58,10 @@ const Navbar: React.FC = () => {
           <a 
             href="/connect" 
             className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
-          >
-            Connect
-          </a>
-        </nav>
+          >  
+            Connect  
+          </a>  
+        </nav>  
 
         <div>
           <a

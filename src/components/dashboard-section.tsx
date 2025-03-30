@@ -49,14 +49,13 @@ const Dashboard: React.FC = () => {
                 Experience farm-fresh produce with cutting-edge agricultural innovation
           </p>
           
-          <SignInButton>
+          <SignInButton >
             <button className="group relative mt-4 ml-28 bg-gradient-to-r from-green-600 to-green-500 text-white font-medium py-4 px-5 rounded-full transform transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] animate-button-entry overflow-hidden">
             <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             <span className="">Explore Now</span>
           </button>
           </SignInButton>
-        
-          <SignedIn>
+        <SignedIn>
         <UserButton />
         <Link to="/dashboard">
           <button className="btn">Go to Dashboard</button>
