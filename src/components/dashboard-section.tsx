@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Truck, Leaf, Shield } from 'lucide-react';
-import Navbar from './Navbar';
+import { Truck, Leaf, Shield, Link } from 'lucide-react';
+import Navbar from './navbar';
+import { ImagesSlider } from './ui/images-slider';
+import { TypewriterEffect } from './ui/typewriter-effect';
+import { SignedOut, SignInButton, SignedIn, UserButton } from '@clerk/clerk-react';
+import { Links } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +27,8 @@ const Dashboard: React.FC = () => {
       
       {/* Hero Section with Enhanced Parallax and Nature Theme */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        {/* background image */}
+        {/* <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-110"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")',
@@ -31,10 +36,41 @@ const Dashboard: React.FC = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60 backdrop-blur-[2px]"></div>
-        </div>
+        </div> */}
+
+        <ImagesSlider images={["https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80%22", "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465471736877-2c8bf4536ebf?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]} >
+               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+               <TypewriterEffect words={[{text:"Welcome  ",className: "text-white"},
+                {text:" to",className: "text-white"},
+                {text:" the",className: "text-white"},
+                {text:"AGRIMARKET",className: "text-white"}
+               ]}/>
+                <p className="text-2xl mb-8 max-w-2xl mx-auto text-white/90 text-shadow-lg animate-description-entry mt-8">
+                Experience farm-fresh produce with cutting-edge agricultural innovation
+          </p>
+          
+          <SignInButton>
+            <button className="group relative mt-4 ml-28 bg-gradient-to-r from-green-600 to-green-500 text-white font-medium py-4 px-5 rounded-full transform transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] animate-button-entry overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            <span className="">Explore Now</span>
+          </button>
+          </SignInButton>
+        
+          <SignedIn>
+        <UserButton />
+        <Link to="/dashboard">
+          <button className="btn">Go to Dashboard</button>
+        </Link>
+      </SignedIn>
+                
+              
+           </div>
+        </ImagesSlider>
+        
+        
 
         {/* Animated Overlay Elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/40 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
@@ -58,7 +94,7 @@ const Dashboard: React.FC = () => {
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-green-400 to-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             <span className="relative">Explore Now</span>
           </button>
-        </div>
+        </div> */}
 
         {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

@@ -32,16 +32,40 @@ const Navbar: React.FC = () => {
             Products
           </a>
           <a 
-            href="/location" 
+            href="/pricing" 
             className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
           >
-            Location
+            Market Pricing
+          </a>
+          <a
+          href="/news" 
+            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
+          >
+            News
+          </a>
+          <a
+          href="/orders" 
+            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
+          >
+            Your Orders
+          </a>
+          <a 
+            href="/ai" 
+            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
+          >
+            Ai-Recognition
+          </a>
+          <a 
+            href="/connect" 
+            className="text-white/90 hover:text-white transition-colors duration-200 text-shadow"
+          >
+            Connect
           </a>
         </nav>
 
         <div>
           <a
-            href="/profile"
+            href="/user"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-600 to-green-500 px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-xl hover:from-green-500 hover:to-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
             Profile
