@@ -7,6 +7,7 @@ import Buyer from "./components/buyer"
 import Products from "./components/Products"
 import AiFarmer from "./components/AiFarmer"
 import MarketPricing from "./components/MarketPricing"
+import SecondDashboard from "./components/secondDashboard"
 
 
 
@@ -17,12 +18,12 @@ function App() {
 
 <Routes>
   <Route path="/" element={<Dashboard/>} />
-  <Route path="/farmer" element={<Farmer/>} />
+  <Route path="/dashboard" element={<SecondDashboard/>} />
   <Route path="/buyer" element={<Buyer/>} />
   <Route path="/ai" element={<AiFarmer/>} />
   <Route path="/pricing" element={<MarketPricing/>} />
   <Route path="/products" element={<Products/>} />
-
+  <Route path="/dashboard" element={<Dashboard/>} />
   
 </Routes>
 </BrowserRouter>

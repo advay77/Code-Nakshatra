@@ -354,98 +354,25 @@ const styles = `
 // Components
 function CartDrawer({ isOpen, onClose, cartItems, updateQuantity, removeFromCart }) {
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0)
+    return cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
   }
 
   return (
     <>
       <div className={`cart-overlay ${isOpen ? "open" : ""}`} onClick={onClose}></div>
       <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold">Your Cart</h2>
-            <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100">
-              <X className="w-6 h-6" />
-            </button>
+        {/* ... */}
+        {cartItems.map((item, index) => (
+          <div key={item.id} className="flex items-center gap-4 p-3 border rounded-lg">
+            {/* ... */}
           </div>
-
-          {cartItems.length === 0 ? (
-            <div className="text-center py-10">
-              <ShoppingCart className="w-16 h-16 mx-auto text-gray-300 mb-4" />
-              <p className="text-gray-500">Your cart is empty</p>
-              <button
-                onClick={onClose}
-                className="mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-              >
-                Continue Shopping
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="space-y-4 mb-6 max-h-[calc(100vh-250px)] overflow-y-auto">
-                {cartItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-4 p-3 border rounded-lg">
-                    <img
-                      src={item.product.image || "/placeholder.svg"}
-                      alt={item.product.name}
-                      className="w-16 h-16 object-cover rounded-lg"
-                    />
-                    <div className="flex-1">
-                      <h4 className="font-medium">{item.product.name}</h4>
-                      <p className="text-gray-600">
-                        ₹{item.product.price} per {item.product.unit}
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <div className="flex items-center border rounded-lg">
-                        <button
-                          onClick={() => updateQuantity(item.product.id, Math.max(1, item.quantity - 1))}
-                          className="p-1 hover:bg-gray-100"
-                        >
-                          <Minus className="w-4 h-4" />
-                        </button>
-                        <span className="px-2">{item.quantity}</span>
-                        <button
-                          onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                          className="p-1 hover:bg-gray-100"
-                        >
-                          <Plus className="w-4 h-4" />
-                        </button>
-                      </div>
-                      <button
-                        onClick={() => removeFromCart(item.product.id)}
-                        className="text-red-500 hover:text-red-700"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="border-t pt-4">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-gray-600">Subtotal</span>
-                  <span className="font-bold">₹{calculateTotal().toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-gray-600">Shipping</span>
-                  <span className="font-medium">₹50.00</span>
-                </div>
-                <div className="flex justify-between items-center mb-6 text-lg">
-                  <span className="font-semibold">Total</span>
-                  <span className="font-bold">₹{(calculateTotal() + 50).toFixed(2)}</span>
-                </div>
-                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
-                  Checkout
-                </button>
-              </div>
-            </>
-          )}
-        </div>
+        ))}
+        {/* ... */}
       </div>
     </>
   )
 }
+
 
 function Navigation({ isFarmer, setIsFarmer, cartItems, toggleCart }) {
   return (
