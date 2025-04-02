@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { HeroParallax } from "./ui/hero-parallax";
 import Navbar from "./navbar";
+import { SignInButton } from "@clerk/clerk-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,6 +115,15 @@ function SecondDashboard() {
         <h1 ref={textRef} className="text-7xl font-bold text-center mt-10 text-gray-200">
           Welcome to Your AgriMarket
         </h1>
+      <SignInButton>
+       
+        
+            <button className="group relative mt-4 ml-28 bg-gradient-to-r from-green-600 to-green-500 text-white font-medium py-4 px-5 rounded-full transform transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] animate-button-entry overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            <span className="">Explore Now</span>
+          
+          
+</button></SignInButton>
 
         {/* HeroParallax (Fade-in & Scale) */}
         <div ref={heroRef}>
@@ -154,10 +164,9 @@ function SecondDashboard() {
           <InfiniteMovingCards
             items={[
               { quote: "Game Changer", name: "Ramesh Yadav (Small-Scale Farmer, Uttar Pradesh)", title: "AgriMarket has changed the way I sell my crops Now I can check real-time market prices and connect with buyers without middlemen."},
-              { quote: "Amazing ", name: " Savitri Devi (Organic Farmer, Madhya Pradesh)", title: "I love how easy it is to get farming tips and weather updates. The emergency alert system also makes me feel safer while working in remote areas" },
-              { quote: "very Helpful ", name: " Bhavesh Patel (Dairy & Crop Farmer, Gujarat)", title: "The marketplace feature is a blessing! I sold my old farming equipment within a week. The community support is also great for new farmers like me" },
+              { quote: "Amazing", name: " Savitri Devi (Organic Farmer, Madhya Pradesh)", title: "I love how easy it is to get farming tips and weather updates. The emergency alert system also makes me feel safer while working in remote areas" },
+              { quote: "very Helpful", name: " Bhavesh Patel (Dairy & Crop Farmer, Gujarat)", title: "The marketplace feature is a blessing! I sold my old farming equipment within a week. The community support is also great for new farmers like me" },
               { quote: "Best Application", name: "Ramesh Yadav (Small-Scale Farmer, Uttar Pradesh)", title: "AgriMarket has changed the way I sell my crops Now I can check real-time market prices and connect with buyers without middlemen."},
-
             ]}
             className="bg-transparent w-full z-10 "
           />
