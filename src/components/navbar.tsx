@@ -9,11 +9,7 @@ const navigationItems = [
     icon: <Home className="h-6 w-6" />,
     href: '/'
   },
-  {
-    title: 'Dashboard',
-    icon: <LayoutDashboard className="h-6 w-6" />,
-    href: '/dashboard'
-  },
+ 
   {
     title: 'Products',
     icon: <ShoppingCart className="h-6 w-6" />,
@@ -32,7 +28,7 @@ const navigationItems = [
   {
     title: 'Connect',
     icon: <Users className="h-6 w-6" />,
-    href: '/connect'
+    href: 'https://fastidious-meerkat-0a2e22.netlify.app/'
   },
   {
     title: 'Profile',

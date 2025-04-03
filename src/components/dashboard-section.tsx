@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60 backdrop-blur-[2px]"></div>
         </div> */}
 
-        <ImagesSlider images={["https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80%22", "https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://plus.unsplash.com/premium_photo-1675727571882-29bf0a1830c8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]} >
+        <ImagesSlider images={["https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80%22", "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]} >
                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
                <TypewriterEffect words={[{text:"Welcome  ",className: "text-white"},
                 {text:" to",className: "text-white"},
@@ -162,12 +162,12 @@ const Dashboard: React.FC = () => {
                 description: "Farm-fresh organic vegetables",
               },
               {
-                image: "https://images.unsplash.com/photo-1546630392-db5b1f93cf27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Exotic Fruits",
                 description: "Seasonal fruits from around the world",
               },
               {
-                image: "https://images.unsplash.com/photo-1591805182771-5b1c42681e1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                image:  "https://plus.unsplash.com/premium_photo-1675727571882-29bf0a1830c8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Fresh Herbs",
                 description: "Aromatic herbs for your cuisine",
               },

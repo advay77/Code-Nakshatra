@@ -52,6 +52,13 @@ module.exports = {
           950: "#052e16",
         },
       },
+
+      animation: {
+        'gradient-x': 'gradient-x 15s ease infinite',
+      },
+      backgroundSize: {
+        '300%': '300%',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

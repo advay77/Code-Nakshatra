@@ -154,6 +154,11 @@ function SecondDashboard() {
                 link: "#",
                 thumbnail: "https://media.istockphoto.com/id/2095551020/photo/farmer-inspects-barley-and-uses-agricultural-technology-to-analyze-data-via-tablet-concept-of.jpg?s=2048x2048&w=is&k=20&c=2RuWxCQGx3MG5a2jC0N2oTDP6SULATcrrXlXFYFAc-E=",
               },
+              {
+                title: "Farming Guidance & AI Assistance",
+                link: "#",
+                thumbnail: "https://media.istockphoto.com/id/2095551020/photo/farmer-inspects-barley-and-uses-agricultural-technology-to-analyze-data-via-tablet-concept-of.jpg?s=2048x2048&w=is&k=20&c=2RuWxCQGx3MG5a2jC0N2oTDP6SULATcrrXlXFYFAc-E=",
+              },
              
             ]}
           />
