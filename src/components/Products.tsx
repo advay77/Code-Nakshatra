@@ -148,7 +148,7 @@ const services: Service[] = [
     availability: { en: "Installation within 3 days", hi: "3 दिनों के भीतर स्थापना" },
     type: "irrigation",
     image: "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0",
-    description: {
+    description: { 
       en: "Water-efficient irrigation systems with smart controls",
       hi: "स्मार्ट नियंत्रण के साथ जल-कुशल सिंचाई प्रणाली"
     },
@@ -245,7 +245,7 @@ function Product() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 mt-32">
       <LeafAnimation />
       
       {/* Header */}
@@ -308,6 +308,8 @@ function Product() {
           />
         </motion.div>
       </div>
+
+      <Navbar/>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
