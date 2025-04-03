@@ -39,13 +39,9 @@ const Dashboard: React.FC = () => {
         </div> */}
 
         <ImagesSlider images={["https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80%22", "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]} >
-               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-               <TypewriterEffect words={[{text:"Welcome  ",className: "text-white"},
-                {text:" to",className: "text-white"},
-                {text:" the",className: "text-white"},
-                {text:"AGRIMARKET",className: "text-white"}
-               ]}/>
-                <p className="text-2xl mb-8 max-w-2xl mx-auto text-white/90 text-shadow-lg animate-description-entry mt-8">
+               <div className=" text-white text-2xl font-bold">
+              <h1 className='text-8xl mb-8 max-w-2xl mx-auto text-white/90 text-shadow-lg animate-description-entry mt-8 '>Welcome To AGRIMARKET</h1>
+                <p className="text-4xl mb-8 max-w-2xl mx-auto text-white/90 text-shadow-lg animate-description-entry mt-8 mr-96">
                 Experience farm-fresh produce with cutting-edge agricultural innovation
           </p>
           
@@ -64,7 +60,8 @@ const Dashboard: React.FC = () => {
                 
               
            </div>
-        </ImagesSlider>
+           </ImagesSlider>
+        
         
         
 
@@ -93,7 +90,7 @@ const Dashboard: React.FC = () => {
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-green-400 to-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             <span className="relative">Explore Now</span>
           </button>
-        </div> */}
+        </div> 
 
         {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
