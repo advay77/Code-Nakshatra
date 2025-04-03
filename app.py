@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from groq import Groq
-import requests
 from dotenv import load_dotenv
 
 load_dotenv("\.env")
@@ -116,7 +115,7 @@ elif app_mode == "Disease Recognition":
             ]
             predicted_disease = class_name[result_index]
             st.success(f"Model is Predicting it's {predicted_disease}")
-
+    
             # Fetch and display the solution using Groq LLM
             if "healthy" not in predicted_disease:
                 solution = get_disease_solution(predicted_disease)
