@@ -245,7 +245,7 @@ function Product() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 mt-32">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 mt-20">
       <LeafAnimation />
       
       {/* Header */}
