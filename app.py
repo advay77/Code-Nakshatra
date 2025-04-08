@@ -4,7 +4,7 @@ import numpy as np
 from groq import Groq
 from dotenv import load_dotenv
 
-load_dotenv("\.env")
+load_dotenv(".env")
 import os
 GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 client=Groq(api_key=GROQ_API_KEY)
@@ -13,7 +13,7 @@ def model_prediction(test_image):
     model  = tf.keras.models.load_model('trained_model.h5', compile=False)
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(128, 128))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
-    input_arr = np.array([input_arr]) #Convert single image to a batch
+    input_arr = np.array([input_arr])
     prediction = model.predict(input_arr)
     result_index = np.argmax(prediction)
     return result_index
